@@ -8,14 +8,14 @@ export function getUsers() {
 }
 
 export function deleteUser(id) {
-  return del(`user/${id}`);
+  return del(`users/${id}`);
 }
 
 function get(url) {
   return fetch(baseUrl + url).then(onSuccess, onError);
 }
 
-//Can't call func delete since reserved word.
+// Can't call func delete since reserved word.
 function del(url) {
   const request = new Request(baseUrl + url, {
     method: 'DELETE'
